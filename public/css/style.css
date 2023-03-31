@@ -1,0 +1,107 @@
+
+main {
+  text-align: justify;
+}
+/*ASIDE STYLE*/
+aside {
+  background-color: rgb(40, 36, 36);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  padding: 20px;
+}
+
+aside ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+aside li {
+  margin-bottom: 10px;
+}
+
+aside a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+aside a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.aside-wrapper {
+  display: block;
+  /* display the aside element */
+}
+
+/*END OF ASIDE STYLE*/
+/*STYLE MAIN CONTETNT*/
+/* Set margin for main content */
+.main-content {
+  margin-left: 250px;
+  margin-right: 25px;
+  margin-top: 25px;
+}
+/* css of button toggle-aside*/
+#toggle-aside{
+  background-color: rgb(40, 36, 36); border-color: #f0f0f0;
+}
+
+/* Hide toggle button on desktop screens */
+@media only screen and (min-width: 769px) {
+  #toggle-aside {
+    display: none;
+  }
+}
+
+/* Position toggle button to the right */
+#toggle-aside {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  /* make sure it's on top of other elements */
+}
+
+/* Hide aside on mobile */
+@media only screen and (max-width: 768px) {
+  .aside-wrapper {
+    left: -400px;
+    /* move it off the screen */
+    transition: all 0.3s ease-in-out;
+    /* add a transition effect */
+  }
+
+  .main-content {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  /* Show aside on click */
+  .aside-wrapper.show {
+    left: 0;
+    /* move it into view */
+  }
+}
+
+/*welcome css*/
+
+#welcome-img {
+  max-width: 400px;
+  max-height: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+  #welcome-img {
+    max-width: 100;
+    max-height: 70px;
+  }
+}
+.intro-text{
+  margin-top: 15px;
+}
+/*end welcome css*/
