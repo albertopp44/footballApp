@@ -11,8 +11,15 @@ use App\Models\Teams;
 use Log;
 use App\Models\Players;
 
+/**
+ * Summary of CompetitionsController
+ */
 class CompetitionsController extends Controller
 {
+    /**
+     * Summary of index
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function index()
     {
         return view('competitions.index');
@@ -21,6 +28,11 @@ class CompetitionsController extends Controller
     {
         return view('competitions.show')->with('data', $competitionId);
     }
+    /**
+     * Summary of competitionIndexAjax
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function competitionIndexAjax(Request $request)
     {
 
@@ -46,6 +58,11 @@ class CompetitionsController extends Controller
                 ->make(true);
         }
     }
+    /**
+     * Summary of competitionAjax
+     * @param mixed $id
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function competitionAjax($id)
     {
 
