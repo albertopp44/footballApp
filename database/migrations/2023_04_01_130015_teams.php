@@ -6,16 +6,13 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('competitions', function (Blueprint $table) {
-            $table->text('id')->unique();
+        Schema::create('teams', function (Blueprint $table) {
+            $table->text('id' )->unique();
             $table->string('name');
-            $table->string('logo');
-            $table->text('country_id');
+            $table->string('image')->nullable();
+            $table->string('coach_name')->nullable();
             $table->timestamps();
         });
     }
@@ -25,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('competitions');
+        Schema::dropIfExists('teams');
     }
 };

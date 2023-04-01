@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//Routes for competitions
+Route::resource('/competitions', 'App\Http\Controllers\CompetitionsController')->except(['edit', 'update', 'delete']);
+Route::get('/show/{competitionId}','App\Http\Controllers\CompetitionsController@show');
+Route::get('/competitionIndexAjax','App\Http\Controllers\CompetitionsController@competitionIndexAjax')->name('competitionIndexAjax');
+Route::get('/competitionAjax/{id}','App\Http\Controllers\CompetitionsController@competitionAjax')->name('competitionAjax');
+// routes for teams
+Route::resource('/teams', 'App\Http\Controllers\TeamsController')->except(['edit', 'update', 'delete']);
+Route::get('/show/{teamId}', 'App\Http\Controllers\TeamsController@show');
+Route::get('/teamAjax/{id}','App\Http\Controllers\TeamsController@teamAjax')->name('teamAjax');

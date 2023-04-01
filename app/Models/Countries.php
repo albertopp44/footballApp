@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Areas extends Model
+class Countries extends Model
 {
-    protected $table = 'areas';
+    protected $table = 'countries';
 
     protected $fillable = [
-       'id','name','code','created_at','updated_at'
+       'id','name','logo','created_at','updated_at'
     ];
 }

@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Teams extends Model
 {
-    use HasFactory;
+    protected $table = 'teams';
+
+    protected $fillable = [
+       'id','name','image','coach_name','created_at','updated_at'
+    ];
 }

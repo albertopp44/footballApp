@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!-- CSS of Bootstrap -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-
+    <title>App en desarrollo</title>
     <!-- JavaScript of Bootstrap -->
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
 </head>

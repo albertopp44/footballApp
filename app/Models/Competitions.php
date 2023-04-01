@@ -12,7 +12,7 @@ class Competitions extends Model
     protected $table = 'competitions';
 
     protected $fillable = [
-       'id','name','code','type','numberOfSeasonsAvailable','area_id','created_at','updated_at'
+       'id','name','logo','country_id','created_at','updated_at'
     ];
 
 }
