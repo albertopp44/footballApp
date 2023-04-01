@@ -13,6 +13,9 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         // $schedule->command('inspire')->hourly();
+        $schedule->command('app:competitions')->hourly();
+        $schedule->command('app:import-teams')->hourly();
+        
     }
 
     /**

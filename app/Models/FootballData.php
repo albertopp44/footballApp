@@ -13,7 +13,7 @@ class FootballData extends Model
 {
   /* This modal is going to be used to handle the API requests
    */
-  private string $apiKey = "168dd4ad4a40dd6557b6b53c455255485bb71bdd6362ff8e4186220f9fafe8e0";
+  private string $apiKey = "";
 
   public function callCompetition()
   {
