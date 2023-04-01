@@ -9,7 +9,7 @@
                 <tr>
                     <th>No</th>
                     <th>League Logo</th>
-                    <th>Games played(Click me to change order)</th>
+                    <th>Players total games(Click me to change order)</th>
                     <th>Scored goals(Click me to change order)</th>
                     <th>Go to team</th>
                 </tr>
