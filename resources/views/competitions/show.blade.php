@@ -1,6 +1,5 @@
 @extends('app')
 
-<body>
 
     @section('content')
         <input type="hidden" name="competitionId" value="{{ $data }}">
@@ -30,7 +29,7 @@
             var table = $('.yajra-datatable').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ env('APP_PREFIX') }}/competitionAjax/" + data + "",
+                ajax: "{{ env('APP_URL') }}/competitionAjax/" + data + "",
                 columns: [{
                         data: 'image',
                         name: 'image',
@@ -58,7 +57,7 @@
                         "render": function(data, type, row) {
 
 
-                            return '<a href="{{ env('APP_PREFIX') }}/teams/' + data + '">Show';
+                            return '<a href="{{ env('APP_URL') }}/teams/' + data + '">Show';
                         }
                     },
                 ]
@@ -68,4 +67,4 @@
       
     </script>
 
-    </html>
+

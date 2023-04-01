@@ -1,6 +1,6 @@
 @extends('app')
 
-<body>
+
 
     @section('content')
         <table class="table table-bordered yajra-datatable">
@@ -63,7 +63,7 @@
                         "render": function(data, type, row) {
 
 
-                            return '<a href="{{ env('APP_PREFIX') }}/competitions/' + data +
+                            return '<a href="{{ env('APP_URL') }}/competitions/' + data +
                                 '">Show';
                         }
                     },
@@ -74,4 +74,4 @@
         });
     </script>
 
-    </html>
+

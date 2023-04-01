@@ -4,7 +4,9 @@
 
         <ul>
             <h6 style="color:white">LIST</h6>
-            <li><a href="/competitions">Competitions</a></li>
+            <li><a href="/footballapp">Home</a></li>
+            <li><a href="/footballapp/competitions">Competitions</a></li>
+            <li><a href="/footballapp/top_scorers">Tops scorers</a></li>
         </ul>
     </aside>
     <script>

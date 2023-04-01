@@ -1,6 +1,6 @@
 @extends('app')
 
-<body>
+
 
     @section('content')
         <input type="hidden" name="teamId" value="{{ $data }}">
@@ -30,13 +30,20 @@
             var table = $('.yajra-datatable').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ env('APP_PREFIX') }}/teamAjax/" + data + "",
+                ajax: "{{ env('APP_URL') }}/teamAjax/" + data + "",
                 columns: [{
 
                         data: 'image',
                         name: 'image',
                         "render": function(data, type, row) {
-                            return "<img src='" + data + "' width=75 height=75>";
+                            let img = "";
+                            /*if(!data)
+                            {
+                                img = "<img src='/footballapp/public/img/profile.webp' width=75 height=75>";
+                            } else {
+                                img = "<img src='" + data + "' width=75 height=75>";
+                            }*/
+                            return "<img src='/footballapp/public/img/profile.webp' width=75 height=75>";
                         }
                     },
                     {
@@ -49,11 +56,13 @@
                     },
                     {
                         data: 'games_played',
-                        name: 'games_played'
+                        name: 'games_played',
+                        orderable: true
                     },
                     {
                         data: 'goals_scored',
-                        name: 'goals_scored'
+                        name: 'goals_scored',
+                         orderable: true
                     }
                 ]
             });
@@ -61,5 +70,3 @@
         });
       
     </script>
-
-    </html>
