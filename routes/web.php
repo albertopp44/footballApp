@@ -25,3 +25,6 @@ Route::get('/competitionAjax/{id}','App\Http\Controllers\CompetitionsController@
 Route::resource('/teams', 'App\Http\Controllers\TeamsController')->except(['edit', 'update', 'delete']);
 Route::get('/show/{teamId}', 'App\Http\Controllers\TeamsController@show');
 Route::get('/teamAjax/{id}','App\Http\Controllers\TeamsController@teamAjax')->name('teamAjax');
+// routes for players
+Route::resource('/players', 'App\Http\Controllers\PlayersController')->except(['edit', 'update', 'delete','show']);
+Route::get('/playersAjax','App\Http\Controllers\PlayersController@playersAjax')->name('playersAjax');

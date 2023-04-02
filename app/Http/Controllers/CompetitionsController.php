@@ -36,7 +36,6 @@ class CompetitionsController extends Controller
     public function competitionIndexAjax(Request $request)
     {
 
-        if ($request->ajax()) {
             $data = Competitions::orderBy('name', 'asc')->get();
             return Datatables::of($data)
                 ->addIndexColumn()
@@ -56,7 +55,6 @@ class CompetitionsController extends Controller
                 })
                 ->rawColumns(['action'])
                 ->make(true);
-        }
     }
     /**
      * Summary of competitionAjax
